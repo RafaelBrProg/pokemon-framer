@@ -52,7 +52,52 @@ const PokemonCard = ({ name, img, type, hp, attacks, flipped, evolved }) => {
       secondary: '#A8E080',
       bg: 'radial-gradient(circle at top left, #78C850, #5CA935 80%)',
       border: 'linear-gradient(135deg, #A8E080, #78C850)'
-    }
+    },
+    
+    ghost: {
+      primary: '#78C850',
+      secondary: '#A8E080',
+      bg: 'radial-gradient(circle at top left,rgb(116, 80, 200),rgb(88, 53, 169) 80%)',
+      border: 'linear-gradient(135deg,rgb(177, 128, 224),rgb(116, 80, 200))'
+    },
+    psychic: {
+      primary: '#78C850',
+      secondary: '#A8E080',
+      bg: 'radial-gradient(circle at top left,rgb(116, 80, 200),rgb(88, 53, 169) 80%)',
+      border: 'linear-gradient(135deg,rgb(177, 128, 224),rgb(116, 80, 200))'
+    },
+    
+    normal: {
+      primary: '#78C850',
+      secondary: '#A8E080',
+      bg: 'radial-gradient(circle at top left,rgb(145, 145, 145),rgb(141, 140, 145) 80%)',
+      border: 'linear-gradient(135deg,rgb(212, 212, 212),rgb(176, 174, 182))',
+    },
+    flying: {
+      primary: '#78C850',
+      secondary: '#A8E080',
+      bg: 'radial-gradient(circle at top left,rgb(166, 189, 204),rgb(175, 191, 202) 80%)',
+      border: 'linear-gradient(135deg,rgb(166, 189, 204),rgb(171, 197, 214))',
+    },
+    bug: {
+      primary: '#78C850',
+      secondary: '#A8E080',
+      bg: 'radial-gradient(circle at top left, #78C850, #5CA935 80%)',
+      border: 'linear-gradient(135deg, #A8E080, #78C850)'
+    },
+    fairy: {
+      primary: '#78C850',
+      secondary: '#A8E080',
+      bg: 'radial-gradient(circle at top left,rgb(180, 80, 200),rgb(136, 53, 169) 80%)',
+      border: 'linear-gradient(135deg,rgb(197, 128, 224),rgb(162, 80, 200))'
+    },
+    poison: {
+      primary: '#78C850',
+      secondary: '#A8E080',
+      bg: 'radial-gradient(circle at top left,rgb(98, 80, 200),rgb(74, 53, 169) 80%)',
+      border: 'linear-gradient(135deg,rgb(149, 128, 224),rgb(98, 80, 200))'
+    },
+    
   };
 
   const style = typeStyles[type] || typeStyles.fire;

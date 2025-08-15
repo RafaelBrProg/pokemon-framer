@@ -19,6 +19,7 @@
 .arrowButton:hover {
   color: #2196f3;
 }
+
 .gridContainer {
   display: flex;
   flex-direction: row;
@@ -32,6 +33,7 @@
   max-width: 100vw;
   box-sizing: border-box;
 }
+
 .cardContainer {
   perspective: 1000px;
   width: 300px;
@@ -52,18 +54,20 @@
   transition: transform 0.6s;
 }
 
-.cardBack, .cardFront {
+.cardBack,
+.cardFront {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 16px;
   overflow: hidden;
+  border: solid 9px #b4b4b4;
 }
 
-
 .cardBack {
-  background: linear-gradient(135deg, #e0e0e0, #b0b0b0);
+  background: linear-gradient(135deg, #121958, #1a1dce);
+  border: solid 9px #104488;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,11 +115,12 @@
     repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 4px);
 }
 
-
 .cardFront {
   transform: rotateY(180deg);
   padding: 24px;
   color: white;
+  display: flex;
+  flex-direction: column; /* agora organiza tudo na vertical */
 }
 
 .cardHp {
@@ -135,10 +140,14 @@
   position: relative;
   width: 100%;
   height: 180px;
-  margin-top: 40px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-bfc0-622f-a75a-2d87a534c2d4/raw?se=2025-08-15T19%3A32%3A41Z&sp=r&sv=2024-08-04&sr=b&scid=7ecc3238-8350-5d3b-87c9-cc25c033e37f&skoid=bbd22fc4-f881-4ea4-b2f3-c12033cf6a8b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-15T01%3A27%3A47Z&ske=2025-08-16T01%3A27%3A47Z&sks=b&skv=2024-08-04&sig=OYuGe9qUr8Y4/QoBJJnFtx0x6vsNwh/gHbNAKeUmgks%3D);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
 }
 
 .pokemonImage {
@@ -174,18 +183,28 @@
   animation: flash 1s infinite;
 }
 
-.grass {
+.grass,
+.ghost,
+.psychic,
+.normal,
+.flying,
+.bug,
+.fairy,
+.poison {
   background: radial-gradient(circle, var(--type-secondary), var(--type-primary));
   animation: rotate 5s infinite linear;
 }
 
 .cardHeader {
+  position: absolute;
+  top: 10px;     
+  left: 10px;    
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 24px;
-  margin-top: 10px;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 4px;
   z-index: 3;
+  margin-bottom: 20px;
 }
 
 .pokemonName {
@@ -209,7 +228,7 @@
 
 .cardAttacks {
   padding: 16px 24px;
-  margin-top: 10px;
+  margin-top: auto; /* empurra os ataques para o fim do card */
 }
 
 .attack {
@@ -225,6 +244,7 @@
   display: flex;
   gap: 4px;
   margin-right: 12px;
+  color: lightgray;
 }
 
 .cost {
